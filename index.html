@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <title>RentZen</title>
     <meta charset="UTF-8">
@@ -22,204 +23,216 @@
 
 <body>
 
-<!-- Top Navigation Bar -->
+    <!-- Top Navigation Bar -->
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-    <!-- Logo -->
-      <a class ="navbar-brand" href="index.html">
-          <img alt="Rentzen Logo" src="images/favicon.png" style="width:65px;">
-      </a>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img alt="Rentzen Logo" src="images/favicon.png" style="width:65px;">
+        </a>
 
-    <!-- Toggler Icon for responsiveness -->
-    <button id="toggle-icon" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-    </button>
+        <!-- Toggler Icon for responsiveness -->
+        <button id="toggle-icon" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <!--Menu sets on the left -->
-        <ul class="navbar-nav mr-auto">
-        </ul>
-    <!--Menu sets on the right -->
-    <!--Each individual item can be secured by adding the class: secured -->
-        <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <!--Menu sets on the left -->
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <!--Menu sets on the right -->
+            <!--Each individual item can be secured by adding the class: secured -->
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item secured">
-                    <a class="nav-link" href="#div-dashboard"><i class="fa fa-list"></i>  Dashboard </a>
+                    <a class="nav-link" href="#div-dashboard"><i class="fa fa-list"></i> Dashboard </a>
                 </li>
                 </li>
                 <li class="nav-item secured">
                     <a class="nav-link" href="#div-login"><i class="fa fa-sign-out"></i>Logout</a>
                 </li>
-        </ul>
-    </div>
-</nav>
-
-<br><br><br><br>
-
-<!--Start container for BS4 (Bootstrap 4) formatting-->
-<div class="container-fluid">
-
-    <div class="row text-center">
-        <div class="col-md-12">
-			&nbsp; <!-- place holder for additional top row content -->
+            </ul>
         </div>
-    </div>
+    </nav>
 
-    <div class="row">
-    <div class="col-md-2"></div>
+    <br><br><br><br>
 
-        <div class="col-md-8 content-wrapper " id="div-login" style="display: none;">
+    <!--Start container for BS4 (Bootstrap 4) formatting-->
+    <div class="container-fluid">
+
+        <div class="row text-center">
+            <div class="col-md-12">
+                &nbsp;
+                <!-- place holder for additional top row content -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-8 content-wrapper " id="div-login" style="display: none;">
                 <div class="text-center">
-                        <img class="img-fluid" src="images/city.png" alt="Philadelphia Skyline">
+                    <img class="img-fluid" src="images/city.png" alt="Philadelphia Skyline">
                 </div>
                 <br>
                 <div class="text-center">
                     <h1>Sign In</h1>
                 </div>
                 <form id='form-login'>
-				<label for="username">Email:</label>
-				<input type="text" name="username" id="username" class="form-control" >
-				<label for="password">Password:</label>
-                <input type="password" name="password" id="password" class="form-control" >
-                <br>
-				<div class="text-center">
-                <input type="button" value="Sign in as renter" name="btnLogin" id="btnLogin" class="btn btn-primary">
-                <p>Don't have an account? <a id="signup-link" href="#div-signup">Sign up!</a></p>
-                </div>
-                <br>
-                <div id='login_message' class="alert alert-danger text-center" style="display:none;">
-                </div>
-                <input type="hidden" name="renterid" id="renterid">
-			</form>
-		</div>
-
-        <div class="col-md-8 content-wrapper " id="div-dashboard"  style="display: none;">
-            <div class="list-group">
-                <div class="list-group-item list-group-item-action active"><b>Renters Dashboards </b></div>
-                <a href="#div-properties" class="list-group-item list-group-item-action">Search for properties <i class="fa fa-angle-double-right pull-right"></i></a>
-                <a href="#div-applications" class="list-group-item list-group-item-action">My rental applications <i class="fa fa-angle-double-right pull-right"></i></a>
-            </div>
-            <br>
-            <div class="list-group">
-                <div class="list-group-item list-group-item-action active"><b>Account </b></div>
-                <a href="#div-profile" class="list-group-item list-group-item-action">Update Profile <i class="fa fa-angle-double-right pull-right"></i></a>
-                <a href="#div-login" class="list-group-item list-group-item-action">Logout <i class="fa fa-angle-double-right pull-right"></i></a>
-            </div>
-        </div>
-
-
-		<div class="col-md-8 content-wrapper " id="div-home" style="display: none;">
-			<div class="text-center">
-                <div>
-                    <img class="img-fluid" src="images/city.png" alt="Philadelphia Skyline">
-                </div>
-                <br>
-                <div class="body-text">
-                    <h1>Welcome to RentZen</h1>
+                    <label for="username">Email:</label>
+                    <input type="text" name="username" id="username" class="form-control">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" class="form-control">
                     <br>
-                    <p><strong>Our Mission? </strong>Bring zen to renting. </p>
-                    <p>RentZen provides a digital experience for landlords to find qualified tenants 
-                        and renters to find the homr of their dreams without the hassle of in-person showings.
-                        It's an all-in-one platform for renting homes and apartments. RentZen connects landlords
-                        and renters via an easy to use platform that reduces in-person visits to properties
-                        reviews user qualifications, and streamlines communication between landlords and renters.</p>
-                </div>
-                <div>
-                    <input class="btn btn-primary" id="signup-button" type="button" value="Sign Up">
-                    <input class="btn btn-primary signin-button" id="signin-button" type="button" value="Sign In">
-                </div>
-                <br>
-            </div>
-        </div>
-        
-		<div class="col-md-8 content-wrapper " id="div-properties" style="display: none;">
-            <div>
-                <div>
-                    <img class="img-fluid" src="images/city.png" alt="Philadelphia Skyline">
-                </div>
-                <br>
-                <div>
                     <div class="text-center">
-                      <h1>Find your home</h1>
-                      <p>Only listed properties can be found here.</p>
+                        <input type="button" value="Sign in as renter" name="btnLogin" id="btnLogin"
+                            class="btn btn-primary">
+                        <p>Don't have an account? <a id="signup-link" href="#div-signup">Sign up!</a></p>
                     </div>
-                    <form id='form-login'>
-                        <label for="city">City:</label>
-                        <input type="text" name="city" id="city" class="form-control" >
-                        <br>
-                        <div class="text-center">
-                            <input type="button" value="Search" name="btnSearch" id="btnSearch" class="btn btn-primary">
-                        </div>
-                    </form>
+                    <br>
+                    <div id='login_message' class="alert alert-danger text-center" style="display:none;">
+                    </div>
+                    <input type="hidden" name="renterid" id="renterid">
+                </form>
+            </div>
+
+            <div class="col-md-8 content-wrapper " id="div-dashboard" style="display: none;">
+                <div class="list-group">
+                    <div class="list-group-item list-group-item-action active"><b>Renters Dashboards </b></div>
+                    <a href="#div-properties" class="list-group-item list-group-item-action">Search for properties <i
+                            class="fa fa-angle-double-right pull-right"></i></a>
+                    <a href="#div-applications" class="list-group-item list-group-item-action">My rental applications <i
+                            class="fa fa-angle-double-right pull-right"></i></a>
+                </div>
+                <br>
+                <div class="list-group">
+                    <div class="list-group-item list-group-item-action active"><b>Account </b></div>
+                    <a href="#div-profile" class="list-group-item list-group-item-action">Update Profile <i
+                            class="fa fa-angle-double-right pull-right"></i></a>
+                    <a href="#div-login" class="list-group-item list-group-item-action">Logout <i
+                            class="fa fa-angle-double-right pull-right"></i></a>
                 </div>
             </div>
-		</div>
-        
-		<div class="col-md-8 content-wrapper " id="div-applications" style="display: none;">
-            <h1>applications</h1>
-            <h2>applications will go here</h2>
-		</div>
-        
-		<div class="col-md-8 content-wrapper " id="div-profile" style="display: none;">
-            <h1>profile</h1>
-            <h2>profile information will go here</h2>
-		</div>
-		
-		<div class="col-md-8 content-wrapper " id="div-signup" style="display: none;">
-			<div>
-                <br>
-                <div class="body-text">
-                    <h1 class="text-center">Renter Sign Up</h1>
-                    <form id="form-signup">
-                        <label for="email">Email:</label>
-                        <input type="text" name="username" id="username" class="form-control" >
-                        <label for="password">Password:</label>
-                        <input type="password" name="password" id="password" class="form-control" >
+
+
+            <div class="col-md-8 content-wrapper " id="div-home" style="display: none;">
+                <div class="text-center">
+                    <div>
+                        <img class="img-fluid" src="images/city.png" alt="Philadelphia Skyline">
+                    </div>
+                    <br>
+                    <div class="body-text">
+                        <h1>Welcome to RentZen</h1>
                         <br>
-                        <div class="text-center">
-                        <input type="button" value="Sign Up" name="signup-button2" id="signup-button2" class="btn btn-primary" >
-                        </div>
-                        <div id="signup-message" class="alert alert-danger text-center" style="display:none;">
-                            
-                        </div>
-                    </form>
+                        <p><strong>Our Mission? </strong>Bring zen to renting. </p>
+                        <p>RentZen provides a digital experience for landlords to find qualified tenants
+                            and renters to find the homr of their dreams without the hassle of in-person showings.
+                            It's an all-in-one platform for renting homes and apartments. RentZen connects landlords
+                            and renters via an easy to use platform that reduces in-person visits to properties
+                            reviews user qualifications, and streamlines communication between landlords and renters.
+                        </p>
+                    </div>
+                    <div>
+                        <input class="btn btn-primary" id="signup-button" type="button" value="Sign Up">
+                        <input class="btn btn-primary signin-button" id="signin-button" type="button" value="Sign In">
+                    </div>
+                    <br>
                 </div>
             </div>
-		</div>
-		
-		<div class="col-md-8 content-wrapper " id="div-confirmation" style="display: none;">
-			<div class="text-center">
-                <br>
-                <h1>Your RentZen account was created</h1>
-                <input class="btn btn-primary signin-button" id="signin-button2" type="button" value="Sign In">
+
+            <div class="col-md-8 content-wrapper " id="div-properties" style="display: none;">
+                <div>
+                    <div>
+                        <img class="img-fluid" src="images/city.png" alt="Philadelphia Skyline">
+                    </div>
+                    <br>
+                    <div>
+                        <div class="text-center">
+                            <h1>Find your home</h1>
+                            <p>Only listed properties can be found here.</p>
+                        </div>
+                        <form id='form-login'>
+                            <label for="city">City:</label>
+                            <input type="text" name="city" id="city" class="form-control">
+                            <br>
+                            <div class="text-center">
+                                <input type="button" value="Search" name="btnSearch" id="btnSearch"
+                                    class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-		</div>
 
-    <div class="col-md-2"></div>
-    </div>
+            <div class="col-md-8 content-wrapper " id="div-applications" style="display: none;">
+                <h1>applications</h1>
+                <h2>applications will go here</h2>
+            </div>
 
-<div class="row">
-    <div class="col-md-12 text-center">
-        <div>
-            &nbsp;
+            <div class="col-md-8 content-wrapper " id="div-profile" style="display: none;">
+                <h1>profile</h1>
+                <h2>profile information will go here</h2>
+            </div>
+
+            <div class="col-md-8 content-wrapper " id="div-signup" style="display: none;">
+                <div>
+                    <br>
+                    <div class="body-text">
+                        <h1 class="text-center">Renter Sign Up</h1>
+                        <form id="form-signup">
+                            <label for="email">Email:</label>
+                            <input type="text" name="username" id="username" class="form-control">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" class="form-control">
+                            <br>
+                            <div class="text-center">
+                                <input type="button" value="Sign Up" name="signup-button2" id="signup-button2"
+                                    class="btn btn-primary">
+                            </div>
+                            <div id="signup-message" class="alert alert-danger text-center" style="display:none;">
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 content-wrapper " id="div-confirmation" style="display: none;">
+                <div class="text-center">
+                    <br>
+                    <h1>Your RentZen account was created</h1>
+                    <input class="btn btn-primary signin-button" id="signin-button2" type="button" value="Sign In">
+                </div>
+            </div>
+
+            <div class="col-md-2"></div>
         </div>
-    </div>
-</div>
 
-</div> <!-- container //-->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div>
+                    &nbsp;
+                </div>
+            </div>
+        </div>
 
-<br>
+    </div> <!-- container //-->
+
+    <br>
     <div class="container-fluid bg-dark text-white">
         <div class="row">
             <div class="col-md-12 text-center">
-            <p>&copy; 2019 RentZen - MIS3502</p>
-            <p>About us</p>
+                <p>&copy; 2019 RentZen - MIS3502</p>
+                <p>About us</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-				&nbsp; <!-- place holder for additional footer content -->
+                &nbsp;
+                <!-- place holder for additional footer content -->
             </div>
         </div>
     </div>
 </body>
+
 </html>
