@@ -155,13 +155,54 @@
 		</div>
         
 		<div class="col-md-8 content-wrapper " id="div-applications" style="display: none;">
-            <h1>applications</h1>
-            <h2>applications will go here</h2>
+            <h1>My Rental Applications</h1>
+            <div class="table-responsive" id="rentalApplications">
+                <table class="table">
+                    <thread>
+                        <tr>
+                            <th>Property</th>
+                            <th>Landlord</th>
+                            <th>Rental Fee</th>
+                            <th>Status</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr>
+                            <td id="property"></td>
+                            <td id="landlord"></td>
+                            <td id="rentalFee"></td>
+                            <td id="status"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 		</div>
         
 		<div class="col-md-8 content-wrapper " id="div-profile" style="display: none;">
-            <h1>profile</h1>
-            <h2>profile information will go here</h2>
+            <div>
+                    <h1>Update Renter Profile</h1>
+                    <form id="form-profile">
+                            <label for="email">Username:</label>
+                            <input type="text" name="username" id="username" class="form-control" >
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" class="form-control" >
+                            <label for="firstName">First Name:</label>
+                            <input type="text" name="firstname" id="firstname" class="form-control" >
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" name="lastname" id="lastname" class="form-control" >
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input type="number" name="phone" id="phone" class="form-control" >
+                            <label for="creditrating">Credit Rating:</label>
+                            <input type="number" name="creditrating" id="creditrating" class="form-control" >
+                            <label for="income">Income:</label>
+                            <input type="number" name="income" id="income" class="form-control" >
+                            <div class="text-center">
+                            <input type="button" value="Update Profile" id="update-button" class="btn btn-primary" >
+                            </div>
+                            <div id="update-message" class="alert alert-danger text-center" style="display:none;"> 
+                            </div>
+                        </form>
+            </div>
 		</div>
 		
 		<div class="col-md-8 content-wrapper " id="div-signup" style="display: none;">
